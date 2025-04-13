@@ -136,8 +136,7 @@ namespace LoginSignupSystem
                         break;
 
                     case "login":
-                        if (HandleLogin())
-                            return; // Exit after successful login
+                        HandleLogin();
                         break;
 
                     case "exit":
@@ -149,6 +148,8 @@ namespace LoginSignupSystem
                         break;
                 }
             }
+
+            Console.ReadLine();
         }
 
         static void HandleSignup()
@@ -200,7 +201,6 @@ namespace LoginSignupSystem
 
             return input;
         }
-        
-        Console.ReadLine();
+
     }
 }
